@@ -1,17 +1,16 @@
 package qrCode
 import (
-	"fmt"
 	qr "github.com/skip2/go-qrcode"
-	"os"
+	"fmt"
 )
 
-func getQr(str string) () {
+func getQr(str string) (string, error) {
 
 	if qr, err := qr.New(str, qr.Highest); err != nil {
-		fmt.Errorf("Error: %s", err)
+		return "", err
 	} else {
 		pixels := qr.Bitmap()
-		fmt.Fprint(os.Stderr, getQRString(pixels));
+		return getQRString(pixels), nil
 	}
 }
 
