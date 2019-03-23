@@ -1,13 +1,13 @@
-package grCode
+package qrCode
 import (
 	"fmt"
-	qrcode "github.com/skip2/go-qrcode"
+	qr "github.com/skip2/go-qrcode"
 	"os"
 )
 
 func getQr(str string) () {
 
-	if qr, err := qrcode.New(str, qrcode.Highest); err != nil {
+	if qr, err := qr.New(str, qr.Highest); err != nil {
 		fmt.Errorf("Error: %s", err)
 	} else {
 		pixels := qr.Bitmap()
