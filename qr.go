@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func getQr(str string) (string, error) {
+func GetQr(str string) (string, error) {
 
 	if qr, err := qr.New(str, qr.Highest); err != nil {
 		return "", err
