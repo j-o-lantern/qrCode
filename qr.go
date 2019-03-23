@@ -2,7 +2,6 @@ package grCode
 import (
 	"fmt"
 	qrcode "github.com/skip2/go-qrcode"
-	"math/big"
 	"os"
 )
 
